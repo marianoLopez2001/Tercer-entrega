@@ -23,11 +23,38 @@
   <script src="/js/lightslider.js"></script>
   <script>
     $(document).ready(function () {
-      $("#content-slider").lightSlider({
+      $('#responsive').lightSlider({
         item: 5,
         loop: true,
-        keyPress: true
-      })
+        responsive: [
+          {
+            breakpoint: 1500,
+            settings: {
+              item: 4,
+              slideMargin: 6,
+            }
+          },
+          {
+            breakpoint: 1200,
+            settings: {
+              item: 3,
+              slideMargin: 6,
+            }
+          },
+          {
+            breakpoint: 895,
+            settings: {
+              item: 2,
+            }
+          },
+          {
+            breakpoint: 575,
+            settings: {
+              item: 1,
+            }
+          }
+        ]
+      });
     });
   </script>
   <title>Pagina Comics - Inicio</title>
@@ -77,7 +104,7 @@
   <main>
     <div class="demo">
       <div class="item">
-        <ul id="content-slider" class="content-slider">
+        <ul id="responsive" class="content-slider">
           <li>
             <a href=""><img src="/images/comics/A19LSfFe4sL.png" alt="" width="300px"></a>
           </li>
@@ -224,9 +251,9 @@
   <!--INICIO DE FOOTER-->
 
   <footer>
-    <div class="footerGrid container-fluid mt-5 p-5 text-light shadow2">
+    <div class="footerGrid container-fluid">
       <div>
-        <a class="fs-1 text-light text-decoration-none me-5" href="./index.html">PAGINA COMICS</a>
+        <a class="fs-1 text-light text-decoration-none" href="./index.html">PAGINA COMICS</a>
         <h4 class="copy">© 2022 Pagina Comics</h4>
       </div>
       <div class="sobreNosDiv">
@@ -236,15 +263,15 @@
       </div>
       <div class="hide2">
         <h4 class="pb-3">Contacto</h4>
-        <p class="contactInfo me-2">ejemplo@gmail.com</p>
-        <p class="contactInfo me-2">011 1234-1234</p>
-        <p class="contactInfo me-2">Av. Jorge 1234</p>
+        <p class="contactInfo">ejemplo@gmail.com</p>
+        <p class="contactInfo">011 1234-1234</p>
+        <p class="contactInfo">Av. Jorge 1234</p>
       </div>
       <div class="hide2">
         <h4 class="pb-3">Redes Sociales</h4>
-        <a class="linkRedes me-3 text-light pb-3" href="#">Facebook</a>
-        <a class="linkRedes me-3 text-light pb-3" href="#">Twitter</a>
-        <a class="linkRedes me-3 text-light pb-3" href="#">Instagram</a>
+        <a class="linkRedes text-light pb-3" href="#">Instagram</a>
+        <a class="linkRedes text-light pb-3" href="#">Facebook</a>
+        <a class="linkRedes text-light pb-3" href="#">Twitter</a>
       </div>
     </div>
   </footer>

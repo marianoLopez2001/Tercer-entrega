@@ -1,13 +1,16 @@
-@media only screen and (min-width: 1441px) {
+@media only screen and (max-width: 1200px) {
     .footerGrid {
-        display: flex;
-        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .mapaG, .hide2 {
         display: none;
+    }
+    .footerGrid {
+        grid-template-rows: 1fr !important;
     }
 }
 

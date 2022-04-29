@@ -150,7 +150,11 @@ main {
 
 .footerGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 1rem;
+    padding: 3rem;
+    color: white;
     background-color: map-get($map: $bg-color, $key: color1);
     box-shadow: $shadow;
 
@@ -166,7 +170,7 @@ main {
         }
 
         #sobreNos {
-            max-width: 400px;
+            max-width: 250px;
         }
     }
 
