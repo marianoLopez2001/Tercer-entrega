@@ -29,24 +29,35 @@ header {
 
 main {
   margin-top: 120px; }
-  main .seccionCarousel {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #dee2e6; }
-  main h1, main h2 {
+  main .demo {
+    width: 100%;
+    margin: auto; }
+    main .demo .item {
+      padding-bottom: 60px;
+      border-bottom: 1px solid #dee2e6; }
+      main .demo .item ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin: 0; }
+        main .demo .item ul li {
+          text-align: center;
+          color: black; }
+          main .demo .item ul li img {
+            border-radius: 5px; }
+  main h1,
+  main h2 {
     font-size: 26px; }
-  main .carousel {
-    width: 400px;
-    margin-bottom: 3rem; }
   main .tendencias {
     border-bottom: 1px solid #dee2e6; }
-    main .tendencias .tendencias1, main .tendencias .tendencias2 {
+    main .tendencias .tendencias1,
+    main .tendencias .tendencias2 {
       display: flex;
       justify-content: center; }
     main .tendencias img:hover {
       transform: scale(102%);
       transition: 0.3s; }
-  main .recienAgregados .recienAgregados1, main .recienAgregados .recienAgregados2 {
+  main .recienAgregados .recienAgregados1,
+  main .recienAgregados .recienAgregados2 {
     display: flex;
     justify-content: center; }
   main .recienAgregados img:hover {

@@ -8,11 +8,9 @@
 
 //MAPAS
 
-$bg-color: (
-    color1: $color-principal,
+$bg-color: (color1: $color-principal,
     color2: blue,
-    color3: green
-);
+    color3: green);
 
 //MIXIN
 
@@ -37,8 +35,10 @@ header {
     left: 0px;
     z-index: 1030;
     box-shadow: $shadow;
+
     nav {
         background-color: map-get($map: $bg-color, $key: color1);
+
         ul {
             li {
                 padding: 0.4rem;
@@ -49,23 +49,40 @@ header {
 
 main {
     margin-top: 120px;
-    .seccionCarousel {
-        @include flex;
-        border-bottom: $border;
+    .demo {
+        width: 100%;
+        margin: auto;
+        .item {
+            padding-bottom: 60px;
+            border-bottom: $border;
+            ul {
+                list-style: none outside none;
+		        padding-left: 0;
+                margin: 0;
+                li {
+                    text-align: center;
+                    color: black;
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
     }
-    h1, h2 {
+    h1,
+    h2 {
         font-size: 26px;
     }
-    .carousel {
-        width: 400px;
-        margin-bottom: 3rem;
-    }
+
     .tendencias {
-        border-bottom: $border; 
+        border-bottom: $border;
         @extend %padding;
-        .tendencias1, .tendencias2 {
+
+        .tendencias1,
+        .tendencias2 {
             @include flex;
         }
+
         img {
             &:hover {
                 transform: scale(102%);
@@ -73,11 +90,15 @@ main {
             }
         }
     }
+
     .recienAgregados {
         @extend %padding;
-        .recienAgregados1, .recienAgregados2 {
+
+        .recienAgregados1,
+        .recienAgregados2 {
             @include flex;
         }
+
         img {
             &:hover {
                 transform: scale(102%);
@@ -85,19 +106,23 @@ main {
             }
         }
     }
+
     .instrucciones {
         background-color: map-get($map: $bg-color, $key: color1);
         padding: 4rem;
         box-shadow: $shadow;
     }
-    .formIframe {       
+
+    .formIframe {
         display: flex;
         justify-content: space-evenly;
         flex-flow: row wrap;
         align-items: center;
+
         .btn-primary {
             background-color: map-get($map: $bg-color, $key: color1);
             border-color: $color-principal;
+
             &:hover {
                 background-color: #ff6d5d;
             }
@@ -107,14 +132,16 @@ main {
 
 .botonesSiguiente {
     text-align: center;
+
     a {
         display: inline-block;
         text-decoration: none;
         border-radius: 8px;
         background-color: map-get($map: $bg-color, $key: color1);
-        padding: 8px 18px; 
+        padding: 8px 18px;
         margin: 5px 8px;
-        color: white;  
+        color: white;
+
         &:hover {
             background-color: #ff6d5d;
         }
@@ -126,27 +153,33 @@ main {
     grid-template-columns: repeat(2, 1fr);
     background-color: map-get($map: $bg-color, $key: color1);
     box-shadow: $shadow;
+
     .copy {
         font-size: 12px;
     }
+
     .sobreNosDiv {
         margin-bottom: 3rem;
+
         h4 {
             padding-bottom: 1rem;
         }
+
         #sobreNos {
             max-width: 400px;
         }
     }
+
     .contactInfo {
         display: block;
     }
+
     .linkRedes {
         text-decoration: none;
         display: block;
+
         &:hover {
             text-decoration: underline;
         }
     }
 }
-
