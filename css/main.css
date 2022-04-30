@@ -37,24 +37,43 @@ header {
 
 main {
   margin-top: 120px; }
-  main .comicMain {
-    display: flex;
-    justify-content: center; }
-    main .comicMain .card {
-      text-align: center;
-      width: 400px;
-      padding: 2rem; }
-      main .comicMain .card .comicTitulo {
-        margin-bottom: 1.5rem; }
-      main .comicMain .card img {
-        width: x; }
-      main .comicMain .card .cardTitulo {
+  main .comicTituloPadre {
+    width: 700px;
+    border: 1px solid #dee2e6;
+    padding-bottom: 1rem; }
+    main .comicTituloPadre .comicTitulo {
+      padding-top: 1rem;
+      text-align: center; }
+    main .comicTituloPadre .comicMain {
+      display: flex;
+      justify-content: center; }
+      main .comicTituloPadre .comicMain .cardTitleImg {
+        text-align: center;
+        width: 400px;
+        padding: 1rem; }
+        main .comicTituloPadre .comicMain .cardTitleImg img {
+          border-radius: 5px;
+          box-shadow: 2px 2px 5px #3f3f3f; }
+      main .comicTituloPadre .comicMain .card-body .cardTitulo {
         font-size: 20px; }
-      main .comicMain .card .cardDescripcion {
-        font-size: x; }
-      main .comicMain .card .cardLinks {
-        display: flex;
-        flex-direction: column; }
+      main .comicTituloPadre .comicMain .card-body .cardDescripcion {
+        max-width: 300px; }
+      main .comicTituloPadre .comicMain .card-body .cardLinks a {
+        display: block;
+        text-align: center; }
+  main .comicsRelacionadosContenedor {
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 3rem 0rem 0rem 0rem; }
+    main .comicsRelacionadosContenedor .comicsRelacionadosTitulo {
+      padding: 1.5rem 0rem 1rem 0rem;
+      text-align: center; }
+    main .comicsRelacionadosContenedor .comicsRelacionados {
+      display: flex;
+      justify-content: center; }
+      main .comicsRelacionadosContenedor .comicsRelacionados img:hover {
+        transform: scale(102%);
+        transition: 0.3s; }
   main .tituloPersonajes,
   main .tituloEditoriales {
     font-size: 35px;

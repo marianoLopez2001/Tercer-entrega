@@ -58,32 +58,70 @@ main {
     margin-top: 120px;
 
     //estaria bueno darle un efecto a este h1 de sobre nos
-    .comicMain {
-        display: flex;
-        justify-content: center;
-        .card {
+    .comicTituloPadre {
+        width: 700px;
+        border: $border;
+        padding-bottom: 1rem;
+
+        .comicTitulo {
+            padding-top: 1rem;
             text-align: center;
-            width: 400px;
-            padding: 2rem;
-            .comicTitulo {
-                margin-bottom: 1.5rem;
+        }
+
+        .comicMain {
+            display: flex;
+            justify-content: center;
+
+            .cardTitleImg {
+                text-align: center;
+                width: 400px;
+                padding: 1rem;
+
+                img {
+                    border-radius: 5px;
+                    box-shadow: $shadow2;
+                }
             }
-            img {
-                width: x;
-            }
-            .cardTitulo {
-                font-size: 20px;
-            }
-            .cardDescripcion {
-                font-size: x;
-            }
-            .cardLinks {
-                display: flex;
-                flex-direction: column;
+
+            .card-body {
+                .cardTitulo {
+                    font-size: 20px;
+                }
+
+                .cardDescripcion {
+                    max-width: 300px;
+                }
+
+                .cardLinks {
+                    a {
+                        display: block;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
 
+    .comicsRelacionadosContenedor {
+        border-top: $border;
+        border-bottom: $border;
+        margin: 3rem 0rem 0rem 0rem;
+
+        .comicsRelacionadosTitulo {
+            padding: 1.5rem 0rem 1rem 0rem;
+            text-align: center;
+        }
+
+        .comicsRelacionados {
+            @include flex;
+            img {
+                &:hover {
+                    transform: scale(102%);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
 
     .tituloPersonajes,
     .tituloEditoriales {
