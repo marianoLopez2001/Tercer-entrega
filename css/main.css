@@ -17,6 +17,12 @@ main .tendencias, main .recienAgregados {
   padding: 1.5rem;
   margin-top: 1rem; }
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Anek Bangla', sans-serif; }
+
 header {
   position: fixed;
   top: 0px;
@@ -31,6 +37,166 @@ header {
 
 main {
   margin-top: 120px; }
+  main .comicMain {
+    display: flex;
+    justify-content: center; }
+    main .comicMain .card {
+      text-align: center;
+      width: 400px;
+      padding: 2rem; }
+      main .comicMain .card .comicTitulo {
+        margin-bottom: 1.5rem; }
+      main .comicMain .card img {
+        width: x; }
+      main .comicMain .card .cardTitulo {
+        font-size: 20px; }
+      main .comicMain .card .cardDescripcion {
+        font-size: x; }
+      main .comicMain .card .cardLinks {
+        display: flex;
+        flex-direction: column; }
+  main .tituloPersonajes,
+  main .tituloEditoriales {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 2rem; }
+  main .contenedorPersonajes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 2rem 0rem 5rem 0rem;
+    place-items: center;
+    gap: 4rem; }
+    main .contenedorPersonajes .personajesCard {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      text-align: center;
+      max-height: 481px; }
+      main .contenedorPersonajes .personajesCard img {
+        width: 200px; }
+      main .contenedorPersonajes .personajesCard h2 {
+        margin: auto;
+        font-size: 24px; }
+      main .contenedorPersonajes .personajesCard p {
+        max-width: 200px;
+        margin: auto;
+        padding: 0.5rem;
+        font-size: 0.8rem; }
+      main .contenedorPersonajes .personajesCard .leerMas {
+        background-color: #ff4835;
+        border-radius: 5px;
+        color: white; }
+        main .contenedorPersonajes .personajesCard .leerMas:hover {
+          background-color: #ff6d5d; }
+      main .contenedorPersonajes .personajesCard a {
+        text-decoration: none;
+        color: black; }
+    main .contenedorPersonajes img {
+      margin-bottom: 4px;
+      box-shadow: 0px 3px 5px #b7b7b7;
+      border-radius: 2px; }
+  main .padreEditoriales {
+    border-bottom: 1px solid #dee2e6; }
+    main .padreEditoriales .contenedorEditoriales {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin: 0rem 0rem 3rem 0rem;
+      gap: 4rem;
+      place-items: center; }
+      main .padreEditoriales .contenedorEditoriales .editorialCard {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        text-align: center;
+        max-height: x; }
+      main .padreEditoriales .contenedorEditoriales .tituloEditorialCard {
+        font-size: 24px;
+        margin-top: 5px; }
+      main .padreEditoriales .contenedorEditoriales .descripcionEditorialCard {
+        max-width: 240px;
+        font-size: 0.8rem;
+        margin: auto;
+        margin-bottom: 0.4rem; }
+      main .padreEditoriales .contenedorEditoriales a {
+        text-decoration: none;
+        color: black; }
+      main .padreEditoriales .contenedorEditoriales img {
+        margin-bottom: 4px;
+        box-shadow: 0px 3px 5px #b7b7b7;
+        border-radius: 2px; }
+      main .padreEditoriales .contenedorEditoriales .leerMas {
+        background-color: #ff4835;
+        border-radius: 5px;
+        color: white;
+        padding: 0.5rem;
+        max-width: 250px;
+        margin-bottom: 0rem; }
+        main .padreEditoriales .contenedorEditoriales .leerMas:hover {
+          background-color: #ff6d5d; }
+  main .formIframePersonajes {
+    border-top: 1px solid #dee2e6; }
+  main .contenedorSobreNos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-bottom: 1px solid #dee2e6; }
+    main .contenedorSobreNos .sobreNosUno {
+      padding: 3rem;
+      margin: 2rem 0px 200px 0px;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      background: white;
+      background: linear-gradient(313deg, white 0%, white 32%, #ffd4cf 87%); }
+      main .contenedorSobreNos .sobreNosUno h2 {
+        font-size: 30px; }
+      main .contenedorSobreNos .sobreNosUno p {
+        max-width: 500px; }
+      main .contenedorSobreNos .sobreNosUno span {
+        color: red; }
+      main .contenedorSobreNos .sobreNosUno #necesitasAyuda {
+        font-size: 20px; }
+    main .contenedorSobreNos .sedes {
+      display: flex;
+      justify-content: center;
+      flex-flow: column wrap;
+      align-items: center;
+      margin-top: 200px;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      background: white;
+      background: linear-gradient(146deg, white 0%, white 32%, #ffd4cf 87%); }
+    main .contenedorSobreNos .redesSobreNos {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px solid #dee2e6;
+      margin-bottom: 200px;
+      border-radius: 10px; }
+      main .contenedorSobreNos .redesSobreNos .redesFlex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5rem; }
+        main .contenedorSobreNos .redesSobreNos .redesFlex i {
+          font-size: 300%; }
+    main .contenedorSobreNos .preguntasFrecuentes {
+      border: 1px solid #dee2e6;
+      margin-top: 200px;
+      padding: 1rem;
+      border-radius: 10px; }
+      main .contenedorSobreNos .preguntasFrecuentes h2 {
+        margin: 0rem 0rem 1rem 0rem; }
+      main .contenedorSobreNos .preguntasFrecuentes div {
+        border-bottom: 1px solid #dee2e6;
+        border-top: 1px solid #dee2e6;
+        padding: 1rem; }
   main .demo {
     width: 100%;
     margin: auto; }

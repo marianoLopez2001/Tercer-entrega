@@ -28,6 +28,13 @@ $bg-color: (color1: $color-principal,
 
 //INICIO DE ESTILOS
 
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Anek Bangla', sans-serif;
+}
+
 header {
     position: fixed;
     top: 0px;
@@ -49,19 +56,261 @@ header {
 
 main {
     margin-top: 120px;
+
+    //estaria bueno darle un efecto a este h1 de sobre nos
+    .comicMain {
+        display: flex;
+        justify-content: center;
+        .card {
+            text-align: center;
+            width: 400px;
+            padding: 2rem;
+            .comicTitulo {
+                margin-bottom: 1.5rem;
+            }
+            img {
+                width: x;
+            }
+            .cardTitulo {
+                font-size: 20px;
+            }
+            .cardDescripcion {
+                font-size: x;
+            }
+            .cardLinks {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+
+    .tituloPersonajes,
+    .tituloEditoriales {
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .contenedorPersonajes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: 2rem 0rem 5rem 0rem;
+        place-items: center;
+        gap: 4rem;
+
+        .personajesCard {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: $border;
+            border-radius: 5px;
+            text-align: center;
+            max-height: 481px;
+
+            img {
+                width: 200px;
+            }
+
+            h2 {
+                margin: auto;
+                font-size: 24px;
+            }
+
+            p {
+                max-width: 200px;
+                margin: auto;
+                padding: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .leerMas {
+                background-color: $color-principal;
+                border-radius: 5px;
+                color: white;
+
+                &:hover {
+                    background-color: $color-hover;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        img {
+            margin-bottom: 4px;
+            box-shadow: 0px 3px 5px #b7b7b7;
+            border-radius: 2px;
+        }
+    }
+
+    .padreEditoriales {
+        border-bottom: $border;
+
+        .contenedorEditoriales {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin: 0rem 0rem 3rem 0rem;
+            gap: 4rem;
+            place-items: center;
+
+            .editorialCard {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                border: $border;
+                border-radius: 5px;
+                text-align: center;
+                max-height: x;
+            }
+
+            .tituloEditorialCard {
+                font-size: 24px;
+                margin-top: 5px;
+            }
+
+            .descripcionEditorialCard {
+                max-width: 240px;
+                font-size: 0.8rem;
+                margin: auto;
+                margin-bottom: 0.4rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            img {
+                margin-bottom: 4px;
+                box-shadow: 0px 3px 5px #b7b7b7;
+                border-radius: 2px;
+            }
+
+            .leerMas {
+                background-color: $color-principal;
+                border-radius: 5px;
+                color: white;
+                padding: 0.5rem;
+                max-width: 250px;
+                margin-bottom: 0rem;
+
+                &:hover {
+                    background-color: $color-hover;
+                }
+            }
+        }
+    }
+
+    .formIframePersonajes {
+        border-top: $border;
+    }
+
+    .contenedorSobreNos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        border-bottom: 1px solid #dee2e6;
+
+        .sobreNosUno {
+            padding: 3rem;
+            margin: 2rem 0px 200px 0px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(313deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 32%, rgba(255, 212, 207, 1) 87%);
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                max-width: 500px;
+            }
+
+            span {
+                color: red;
+            }
+
+            #necesitasAyuda {
+                font-size: 20px;
+            }
+        }
+
+        .sedes {
+            display: flex;
+            justify-content: center;
+            flex-flow: column wrap;
+            align-items: center;
+            margin-top: 200px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(146deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 32%, rgba(255, 212, 207, 1) 87%);
+
+        }
+
+        .redesSobreNos {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-flow: column wrap;
+            border: 1px solid #dee2e6;
+            margin-bottom: 200px;
+            border-radius: 10px;
+
+            .redesFlex {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 5rem;
+
+                i {
+                    font-size: 300%;
+                }
+            }
+        }
+
+        .preguntasFrecuentes {
+            border: 1px solid #dee2e6;
+            margin-top: 200px;
+            padding: 1rem;
+            border-radius: 10px;
+
+            h2 {
+                margin: 0rem 0rem 1rem 0rem;
+            }
+
+            div {
+                border-bottom: 1px solid #dee2e6;
+                border-top: 1px solid #dee2e6;
+                padding: 1rem;
+            }
+        }
+    }
+
     .demo {
         width: 100%;
         margin: auto;
+
         .item {
             padding-bottom: 60px;
             border-bottom: $border;
+
             ul {
                 list-style: none outside none;
-		        padding-left: 0;
+                padding-left: 0;
                 margin: 0;
+
                 li {
                     text-align: center;
                     color: black;
+
                     img {
                         border-radius: 5px;
                     }
@@ -69,6 +318,7 @@ main {
             }
         }
     }
+
     h1,
     h2 {
         font-size: 26px;
@@ -124,7 +374,7 @@ main {
             border-color: $color-principal;
 
             &:hover {
-                background-color: #ff6d5d;
+                background-color: $color-hover;
             }
         }
     }
@@ -143,7 +393,7 @@ main {
         color: white;
 
         &:hover {
-            background-color: #ff6d5d;
+            background-color: $color-hover;
         }
     }
 }
