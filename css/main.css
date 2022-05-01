@@ -1,17 +1,36 @@
+@media only screen and (max-width: 1251px) {
+  .comicsRelacionadosImg {
+    grid-template-columns: repeat(2, 1fr) !important;
+    margin: 0rem 15rem; } }
+
+@media only screen and (max-width: 1221px) {
+  .instruccionesDosHide {
+    display: none; } }
+
 @media only screen and (max-width: 1200px) {
   .footerGrid {
     grid-template-columns: repeat(2, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important; } }
+    grid-template-rows: repeat(2, 1fr) !important; }
+  .instruccionesDosHide {
+    display: none; } }
 
 @media only screen and (max-width: 1002px) {
   .semiContacto p {
     text-align: center; } }
 
 @media only screen and (max-width: 992px) {
+  .comicsRelacionadosImg {
+    margin: 0rem; }
   .hide1 {
+    display: none; }
+  .instruccionesDos {
     display: none; } }
 
 @media only screen and (max-width: 768px) {
+  .iframeVid {
+    width: 400px; }
+  .comicsRelacionadosImg img {
+    width: 250px; }
   .comicTituloPadre {
     width: 500px; }
     .comicTituloPadre .comicMain {
@@ -30,6 +49,8 @@
     border-bottom: 1px solid #dee2e6; } }
 
 @media only screen and (max-width: 575px) {
+  .comicsRelacionados {
+    display: none; }
   .mapaG,
   .hide2 {
     display: none; }
@@ -66,6 +87,64 @@ header {
 
 main {
   margin-top: 120px; }
+  main .comicsRelacionados {
+    padding: 3rem 0rem;
+    border: 1px solid #dee2e6; }
+    main .comicsRelacionados h3 {
+      text-align: center;
+      letter-spacing: 5px;
+      padding-bottom: 2rem; }
+    main .comicsRelacionados .comicsRelacionadosImg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-content: center;
+      place-items: center;
+      padding: 0rem 15rem 3rem 15rem;
+      gap: 3rem; }
+      main .comicsRelacionados .comicsRelacionadosImg img {
+        padding: 1rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+        main .comicsRelacionados .comicsRelacionadosImg img:hover {
+          transform: scale(102%);
+          transition: 0.3s; }
+  main .instruccionesContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5rem; }
+    main .instruccionesContainer .instruccionesUno {
+      padding: 2rem;
+      border: 1px solid #dee2e6;
+      border-radius: 5px; }
+      main .instruccionesContainer .instruccionesUno h1 {
+        text-align: center;
+        letter-spacing: 5px;
+        padding-bottom: 1rem;
+        font-size: 30px; }
+      main .instruccionesContainer .instruccionesUno ol li {
+        max-width: 600px; }
+      main .instruccionesContainer .instruccionesUno h2 {
+        font-size: 20px; }
+      main .instruccionesContainer .instruccionesUno .iframeVid {
+        border-radius: 10px;
+        margin: 0rem 0rem 1rem 0rem; }
+      main .instruccionesContainer .instruccionesUno .iconsRedesInstrucciones {
+        text-align: center; }
+        main .instruccionesContainer .instruccionesUno .iconsRedesInstrucciones i {
+          font-size: 2rem;
+          color: black;
+          padding: 3rem; }
+          main .instruccionesContainer .instruccionesUno .iconsRedesInstrucciones i:hover {
+            color: #545454; }
+    main .instruccionesContainer .instruccionesDos {
+      padding: 2rem;
+      margin-top: 5rem; }
+      main .instruccionesContainer .instruccionesDos h3 {
+        letter-spacing: 5px;
+        font-size: 20px; }
+      main .instruccionesContainer .instruccionesDos img {
+        margin: 0rem 1rem 1rem 0rem;
+        border-radius: 5px; }
   main .comicMain {
     display: flex;
     justify-content: center; }
@@ -196,6 +275,8 @@ main {
         background-color: #ff4835;
         color: white;
         text-decoration: none; }
+        main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos .sobreNosUno a:hover {
+          background-color: #ff6d5d; }
   main .sobreNosotros .sobreNosotrosPadre .sobreNosDosPadre {
     padding: 1.5rem 0rem 3rem 0rem;
     border: 1px solid #dee2e6;
@@ -232,7 +313,10 @@ main {
         font-size: 2.5rem;
         padding-top: 1rem; }
         main .sobreNosotros .sobreNosotrosPadreDos .redesSociales .iconsRedes i {
-          margin: 0rem 0.4rem; }
+          margin: 0rem 0.4rem;
+          color: black; }
+          main .sobreNosotros .sobreNosotrosPadreDos .redesSociales .iconsRedes i:hover {
+            color: #545454; }
     main .sobreNosotros .sobreNosotrosPadreDos .semiContacto {
       padding: 3rem; }
       main .sobreNosotros .sobreNosotrosPadreDos .semiContacto h3 {
@@ -277,6 +361,8 @@ h2 {
 
 .tendencias {
   border-bottom: 1px solid #dee2e6; }
+  .tendencias h1 {
+    letter-spacing: 5px; }
   .tendencias .tendencias1,
   .tendencias .tendencias2 {
     display: flex;
@@ -284,6 +370,9 @@ h2 {
   .tendencias img:hover {
     transform: scale(102%);
     transition: 0.3s; }
+
+.recienAgregados h2 {
+  letter-spacing: 5px; }
 
 .recienAgregados .recienAgregados1,
 .recienAgregados .recienAgregados2 {
@@ -298,6 +387,11 @@ h2 {
   background-color: #ff4835;
   padding: 4rem;
   box-shadow: 0 0.2rem 1rem #9c9c9c; }
+  .instrucciones a {
+    text-decoration: none;
+    letter-spacing: 5px; }
+    .instrucciones a:hover {
+      text-decoration: underline; }
 
 .formIframe {
   display: flex;

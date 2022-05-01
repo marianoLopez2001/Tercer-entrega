@@ -1,7 +1,23 @@
+@media only screen and (max-width: 1251px) {
+    .comicsRelacionadosImg {
+        grid-template-columns: repeat(2, 1fr) !important;
+        margin: 0rem 15rem;
+    }
+}
+
+@media only screen and (max-width: 1221px) {
+    .instruccionesDosHide {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .footerGrid {
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(2, 1fr) !important;
+    }
+    .instruccionesDosHide {
+        display: none;
     }
 }
 
@@ -14,12 +30,26 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .comicsRelacionadosImg {
+        margin: 0rem;
+    }
     .hide1 {
+        display: none;
+    }
+    .instruccionesDos {
         display: none;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .iframeVid {
+        width: 400px;
+    }
+    .comicsRelacionadosImg {
+        img {
+            width: 250px;
+        }
+    }
     .comicTituloPadre {
         width: 500px;
 
@@ -32,35 +62,45 @@
             }
         }
     }
+
     .sobreNosDos {
         display: grid !important;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         place-items: center;
+
         .ofrecemos {
             margin: 1rem;
         }
     }
+
     .redesSociales {
         border-bottom: $border;
     }
 }
 
 @media only screen and (max-width: 575px) {
+    .comicsRelacionados{
+        display: none;
+    }
     .mapaG,
     .hide2 {
         display: none;
     }
+
     .comicMain {
         img {
             width: 300px;
         }
     }
+
     .footerGrid {
         grid-template-rows: 1fr !important;
     }
+
     .contenedorSobreNos {
         padding: 1rem;
+
         img {
             width: 300px;
         }
