@@ -5,6 +5,14 @@
     }
 }
 
+@media only screen and (max-width: 1002px) {
+    .semiContacto {
+        p {
+            text-align: center;
+        }
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .hide1 {
         display: none;
@@ -24,6 +32,18 @@
             }
         }
     }
+    .sobreNosDos {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        place-items: center;
+        .ofrecemos {
+            margin: 1rem;
+        }
+    }
+    .redesSociales {
+        border-bottom: $border;
+    }
 }
 
 @media only screen and (max-width: 575px) {
@@ -38,5 +58,11 @@
     }
     .footerGrid {
         grid-template-rows: 1fr !important;
+    }
+    .contenedorSobreNos {
+        padding: 1rem;
+        img {
+            width: 300px;
+        }
     }
 }

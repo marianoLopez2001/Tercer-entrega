@@ -58,72 +58,38 @@ main {
     margin-top: 120px;
 
     //estaria bueno darle un efecto a este h1 de sobre nos
-    .comicTituloPadre {
-        max-width: 700px;
-        border: $border;
-        padding-bottom: 1rem;
+    .comicMain {
+        display: flex;
+        justify-content: center;
 
-        .comicTitulo {
-            padding-top: 1rem;
+        .card {
             text-align: center;
-        }
+            width: 400px;
+            padding: 2rem;
 
-        .comicMain {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            .cardTitleImg {
-                width: 400px;
-                padding: 1rem;
-
-                img {
-                    border-radius: 5px;
-                    box-shadow: $shadow2;
-                    width: 368px;
-                }
+            .comicTitulo {
+                margin-bottom: 1.5rem;
             }
-
-            .card-body {
-                .cardTitulo {
-                    font-size: 20px;
-                }
-
-                .cardDescripcion {
-                    max-width: 300px;
-                    margin: auto;
-                }
-
-                .cardLinks {
-                    a {
-                        display: block;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }
-
-    .comicsRelacionadosContenedor {
-        border-top: $border;
-        border-bottom: $border;
-        margin: 3rem 0rem 0rem 0rem;
-
-        .comicsRelacionadosTitulo {
-            padding: 1.5rem 0rem 1rem 0rem;
-            text-align: center;
-        }
-
-        .comicsRelacionados {
-            @include flex;
 
             img {
-                &:hover {
-                    transform: scale(102%);
-                    transition: 0.3s;
-                }
+                width: x;
+            }
+
+            .cardTitulo {
+                font-size: 20px;
+            }
+
+            .cardDescripcion {
+                font-size: x;
+            }
+
+            .cardLinks {
+                display: flex;
+                flex-direction: column;
             }
         }
     }
+
 
     .tituloPersonajes,
     .tituloEditoriales {
@@ -251,24 +217,24 @@ main {
         border-top: $border;
     }
 
-    //lorem
-
+    //inicio sobre nosotros
     .sobreNosotros {
-
         .sobreNosotrosPadre {
-
             .contenedorSobreNos {
                 display: flex;
                 justify-content: space-evenly;
-                padding-bottom: 3rem;
-                border-bottom: 1px solid #dee2e6;
+                flex-wrap: wrap;
+
+                img {
+                    border-radius: 20px;
+                    padding-bottom: 3rem;
+                }
 
                 .sobreNosUno {
-                    padding: 3rem;
-
+                    padding-bottom: 3rem;
                     h1 {
+                        letter-spacing: 8px;
                         font-size: 15px;
-                        letter-spacing: 5px;
                     }
 
                     h2 {
@@ -276,91 +242,119 @@ main {
                     }
 
                     p {
-                        max-width: 500px;
                         margin: 0px;
+                        max-width: 500px;
                     }
 
-                    #necesitasAyuda {
+                    .h2NecesitasAyuda {
                         font-size: 20px;
-                        padding-bottom: 10px;
+                        margin-bottom: 1.3rem;
                     }
 
                     a {
-                        border-radius: 5px;
+                        border-radius: 10px;
+                        padding: 0.5rem 2.5rem;
                         background-color: $color-principal;
-                        padding: 0.5rem 3rem;
                         color: white;
                         text-decoration: none;
-
-                        &:hover {
-                            background-color: $color-hover;
-                        }
-                    }
-                }
-
-                .preguntasFrecuentes {
-                    border: 1px solid #dee2e6;
-                    margin-top: 200px;
-                    padding: 1rem;
-                    border-radius: 10px;
-
-                    h2 {
-                        margin: 0rem 0rem 1rem 0rem;
-                    }
-
-                    div {
-                        border-bottom: 1px solid #dee2e6;
-                        border-top: 1px solid #dee2e6;
-                        padding: 1rem;
                     }
                 }
             }
 
             .sobreNosDosPadre {
-                padding: 1rem 0rem 3rem 0rem;
+                padding: 1.5rem 0rem 3rem 0rem;
                 border: $border;
+                background-color: #f7f6f6;
+
                 .tituloSobreNosDos {
                     text-align: center;
-                    padding: 1rem;
+                    padding-bottom: 1.5rem;
+                    letter-spacing: 3px;
+                    font-size: 30px;
                 }
+
                 .sobreNosDos {
                     display: flex;
                     justify-content: space-evenly;
+
                     .ofrecemos {
-                        background-color: red;
+                        max-height: 300px;
                         padding: 1rem;
-                        h3 {
+                        border-radius: 5px;
+                        background-color: white;
+                        border: $border;
+
+                        i {
                             font-size: x;
                         }
+
+                        h3 {
+                            font-size: 25px;
+                        }
+
                         p {
-                            max-width: 300px;
+                            max-width: 200px;
                         }
                     }
                 }
             }
         }
+
         .sobreNosotrosPadreDos {
             display: flex;
             justify-content: space-evenly;
-            padding: 2rem;
-            border-bottom: $border;
+            flex-wrap: wrap;
+            border: $border;
+
             .redesSociales {
+                padding: 3rem;
                 .iconsRedes {
                     text-align: center;
-                    font-size: 2rem;
+                    font-size: 2.5rem;
                     padding-top: 1rem;
+
+                    i {
+                        margin: 0rem 0.4rem;
+                    }
                 }
             }
+
             .semiContacto {
+                padding: 3rem;
+                h3 {
+                    padding-bottom: 1rem;
+                    text-align: center;
+                }
+
                 p {
                     max-width: 400px;
                 }
             }
         }
+
+        .sobreNosotrosPadreTres {
+            padding: 1.5rem 0rem 3rem 0rem;
+            border-bottom: $border;
+
+            .preguntasFrecuentes {
+                padding: 1rem;
+
+                h3 {
+                    padding-bottom: 1.5rem;
+                    font-size: 30px;
+                    letter-spacing: 4px;
+                }
+
+                div {
+                    border-top: 1px solid #dee2e6;
+                    border-bottom: 1px solid #dee2e6;
+                    padding: 1rem;
+                    background-color: #f7f6f6;
+                }
+            }
+        }
     }
 }
-
-//lorem
 
 .demo {
     width: 100%;
