@@ -59,7 +59,7 @@ main {
 
     //estaria bueno darle un efecto a este h1 de sobre nos
     .comicTituloPadre {
-        width: 700px;
+        max-width: 700px;
         border: $border;
         padding-bottom: 1rem;
 
@@ -69,17 +69,17 @@ main {
         }
 
         .comicMain {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
             .cardTitleImg {
-                text-align: center;
                 width: 400px;
                 padding: 1rem;
 
                 img {
                     border-radius: 5px;
                     box-shadow: $shadow2;
+                    width: 368px;
                 }
             }
 
@@ -90,6 +90,7 @@ main {
 
                 .cardDescripcion {
                     max-width: 300px;
+                    margin: auto;
                 }
 
                 .cardLinks {
@@ -114,6 +115,7 @@ main {
 
         .comicsRelacionados {
             @include flex;
+
             img {
                 &:hover {
                     transform: scale(102%);
@@ -249,171 +251,198 @@ main {
         border-top: $border;
     }
 
-    .contenedorSobreNos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        border-bottom: 1px solid #dee2e6;
+    //lorem
 
-        .sobreNosUno {
-            padding: 3rem;
-            margin: 2rem 0px 200px 0px;
-            border: 1px solid #dee2e6;
-            border-radius: 10px;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(313deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 32%, rgba(255, 212, 207, 1) 87%);
+    .sobreNosotros {
 
-            h2 {
-                font-size: 30px;
-            }
+        .sobreNosotrosPadre {
 
-            p {
-                max-width: 500px;
-            }
+            .contenedorSobreNos {
+                display: flex;
+                justify-content: space-evenly;
+                padding-bottom: 3rem;
+                border-bottom: 1px solid #dee2e6;
 
-            span {
-                color: red;
-            }
+                .sobreNosUno {
+                    padding: 3rem;
 
-            #necesitasAyuda {
-                font-size: 20px;
-            }
-        }
+                    h1 {
+                        font-size: 15px;
+                        letter-spacing: 5px;
+                    }
 
-        .sedes {
-            display: flex;
-            justify-content: center;
-            flex-flow: column wrap;
-            align-items: center;
-            margin-top: 200px;
-            border: 1px solid #dee2e6;
-            border-radius: 10px;
-            background: rgb(255, 255, 255);
-            background: linear-gradient(146deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 32%, rgba(255, 212, 207, 1) 87%);
+                    h2 {
+                        font-size: 30px;
+                    }
 
-        }
+                    p {
+                        max-width: 500px;
+                        margin: 0px;
+                    }
 
-        .redesSobreNos {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-flow: column wrap;
-            border: 1px solid #dee2e6;
-            margin-bottom: 200px;
-            border-radius: 10px;
+                    #necesitasAyuda {
+                        font-size: 20px;
+                        padding-bottom: 10px;
+                    }
 
-            .redesFlex {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                gap: 5rem;
+                    a {
+                        border-radius: 5px;
+                        background-color: $color-principal;
+                        padding: 0.5rem 3rem;
+                        color: white;
+                        text-decoration: none;
 
-                i {
-                    font-size: 300%;
+                        &:hover {
+                            background-color: $color-hover;
+                        }
+                    }
+                }
+
+                .preguntasFrecuentes {
+                    border: 1px solid #dee2e6;
+                    margin-top: 200px;
+                    padding: 1rem;
+                    border-radius: 10px;
+
+                    h2 {
+                        margin: 0rem 0rem 1rem 0rem;
+                    }
+
+                    div {
+                        border-bottom: 1px solid #dee2e6;
+                        border-top: 1px solid #dee2e6;
+                        padding: 1rem;
+                    }
                 }
             }
-        }
 
-        .preguntasFrecuentes {
-            border: 1px solid #dee2e6;
-            margin-top: 200px;
-            padding: 1rem;
-            border-radius: 10px;
-
-            h2 {
-                margin: 0rem 0rem 1rem 0rem;
-            }
-
-            div {
-                border-bottom: 1px solid #dee2e6;
-                border-top: 1px solid #dee2e6;
-                padding: 1rem;
-            }
-        }
-    }
-
-    .demo {
-        width: 100%;
-        margin: auto;
-
-        .item {
-            padding-bottom: 60px;
-            border-bottom: $border;
-
-            ul {
-                list-style: none outside none;
-                padding-left: 0;
-                margin: 0;
-
-                li {
+            .sobreNosDosPadre {
+                padding: 1rem 0rem 3rem 0rem;
+                border: $border;
+                .tituloSobreNosDos {
                     text-align: center;
-                    color: black;
-
-                    img {
-                        border-radius: 5px;
+                    padding: 1rem;
+                }
+                .sobreNosDos {
+                    display: flex;
+                    justify-content: space-evenly;
+                    .ofrecemos {
+                        background-color: red;
+                        padding: 1rem;
+                        h3 {
+                            font-size: x;
+                        }
+                        p {
+                            max-width: 300px;
+                        }
                     }
                 }
             }
         }
+        .sobreNosotrosPadreDos {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2rem;
+            border-bottom: $border;
+            .redesSociales {
+                .iconsRedes {
+                    text-align: center;
+                    font-size: 2rem;
+                    padding-top: 1rem;
+                }
+            }
+            .semiContacto {
+                p {
+                    max-width: 400px;
+                }
+            }
+        }
     }
+}
 
-    h1,
-    h2 {
-        font-size: 26px;
-    }
+//lorem
 
-    .tendencias {
+.demo {
+    width: 100%;
+    margin: auto;
+
+    .item {
+        padding-bottom: 60px;
         border-bottom: $border;
-        @extend %padding;
 
-        .tendencias1,
-        .tendencias2 {
-            @include flex;
-        }
+        ul {
+            list-style: none outside none;
+            padding-left: 0;
+            margin: 0;
 
-        img {
-            &:hover {
-                transform: scale(102%);
-                transition: 0.3s;
+            li {
+                text-align: center;
+                color: black;
+
+                img {
+                    border-radius: 5px;
+                }
             }
         }
     }
+}
 
-    .recienAgregados {
-        @extend %padding;
+h1,
+h2 {
+    font-size: 26px;
+}
 
-        .recienAgregados1,
-        .recienAgregados2 {
-            @include flex;
-        }
+.tendencias {
+    border-bottom: $border;
+    @extend %padding;
 
-        img {
-            &:hover {
-                transform: scale(102%);
-                transition: 0.3s;
-            }
-        }
+    .tendencias1,
+    .tendencias2 {
+        @include flex;
     }
 
-    .instrucciones {
+    img {
+        &:hover {
+            transform: scale(102%);
+            transition: 0.3s;
+        }
+    }
+}
+
+.recienAgregados {
+    @extend %padding;
+
+    .recienAgregados1,
+    .recienAgregados2 {
+        @include flex;
+    }
+
+    img {
+        &:hover {
+            transform: scale(102%);
+            transition: 0.3s;
+        }
+    }
+}
+
+.instrucciones {
+    background-color: map-get($map: $bg-color, $key: color1);
+    padding: 4rem;
+    box-shadow: $shadow;
+}
+
+.formIframe {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .btn-primary {
         background-color: map-get($map: $bg-color, $key: color1);
-        padding: 4rem;
-        box-shadow: $shadow;
-    }
+        border-color: $color-principal;
 
-    .formIframe {
-        display: flex;
-        justify-content: space-evenly;
-        flex-flow: row wrap;
-        align-items: center;
-
-        .btn-primary {
-            background-color: map-get($map: $bg-color, $key: color1);
-            border-color: $color-principal;
-
-            &:hover {
-                background-color: $color-hover;
-            }
+        &:hover {
+            background-color: $color-hover;
         }
     }
 }
