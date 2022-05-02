@@ -16,7 +16,7 @@ header {
   z-index: 1030;
   box-shadow: 0 0.2rem 1rem #9c9c9c; }
   header nav {
-    background-color: #ff4835; }
+    background-color: #ed372a; }
     header nav ul li {
       padding: 0.4rem; }
 
@@ -151,11 +151,11 @@ main {
         padding: 0.5rem;
         font-size: 0.8rem; }
       main .contenedorPersonajes .personajesCard .leerMas {
-        background-color: #ff4835;
+        background-color: #ed372a;
         border-radius: 5px;
         color: white; }
         main .contenedorPersonajes .personajesCard .leerMas:hover {
-          background-color: #ff6d5d; }
+          background-color: #ff4835; }
       main .contenedorPersonajes .personajesCard a {
         text-decoration: none;
         color: black; }
@@ -194,14 +194,14 @@ main {
         box-shadow: 0px 3px 5px #b7b7b7;
         border-radius: 2px; }
       main .padreEditoriales .contenedorEditoriales .leerMas {
-        background-color: #ff4835;
+        background-color: #ed372a;
         border-radius: 5px;
         color: white;
         padding: 0.5rem;
         max-width: 250px;
         margin-bottom: 0rem; }
         main .padreEditoriales .contenedorEditoriales .leerMas:hover {
-          background-color: #ff6d5d; }
+          background-color: #ff4835; }
   main .formIframePersonajes {
     border-top: 1px solid #dee2e6; }
   main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos {
@@ -209,8 +209,7 @@ main {
     justify-content: space-evenly;
     flex-wrap: wrap; }
     main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos img {
-      border-radius: 20px;
-      padding-bottom: 3rem; }
+      margin-bottom: 3rem; }
     main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos .sobreNosUno {
       padding-bottom: 3rem; }
       main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos .sobreNosUno h1 {
@@ -227,11 +226,11 @@ main {
       main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos .sobreNosUno a {
         border-radius: 10px;
         padding: 0.5rem 2.5rem;
-        background-color: #ff4835;
+        background-color: #ed372a;
         color: white;
         text-decoration: none; }
         main .sobreNosotros .sobreNosotrosPadre .contenedorSobreNos .sobreNosUno a:hover {
-          background-color: #ff6d5d; }
+          background-color: #ff4835; }
   main .sobreNosotros .sobreNosotrosPadre .sobreNosDosPadre {
     padding: 1.5rem 0rem 3rem 0rem;
     border: 1px solid #dee2e6;
@@ -339,7 +338,7 @@ h2 {
   transition: 0.3s; }
 
 .instrucciones {
-  background-color: #ff4835;
+  background-color: #ed372a;
   padding: 4rem;
   box-shadow: 0 0.2rem 1rem #9c9c9c; }
   .instrucciones a {
@@ -354,10 +353,10 @@ h2 {
   flex-flow: row wrap;
   align-items: center; }
   .formIframe .btn-primary {
-    background-color: #ff4835;
-    border-color: #ff4835; }
+    background-color: #ed372a;
+    border-color: #ed372a; }
     .formIframe .btn-primary:hover {
-      background-color: #ff6d5d; }
+      background-color: #ff4835; }
 
 .botonesSiguiente {
   text-align: center; }
@@ -365,12 +364,12 @@ h2 {
     display: inline-block;
     text-decoration: none;
     border-radius: 8px;
-    background-color: #ff4835;
+    background-color: #ed372a;
     padding: 8px 18px;
     margin: 5px 8px;
     color: white; }
     .botonesSiguiente a:hover {
-      background-color: #ff6d5d; }
+      background-color: #ff4835; }
 
 .footerGrid {
   display: grid;
@@ -379,7 +378,7 @@ h2 {
   margin-top: 1rem;
   padding: 3rem;
   color: white;
-  background-color: #ff4835;
+  background-color: #ed372a;
   box-shadow: 0 0.2rem 1rem #9c9c9c; }
   .footerGrid .copy {
     font-size: 12px; }
