@@ -1,3 +1,13 @@
+@media only screen and (min-width: 2000px) {
+    .contenedorPersonajes {
+        grid-template-columns: repeat(5, 1fr) !important;
+        grid-template-rows: repeat(2, 1fr) !important;
+    }
+    .hideCard {
+        display: none !important;
+    }
+}
+
 @media only screen and (max-width: 1251px) {
     .comicsRelacionadosImg {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -30,6 +40,12 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .contenedorPersonajes {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    .contenedorEditoriales {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
     .comicsRelacionadosImg {
         margin: 0rem;
     }
@@ -41,7 +57,40 @@
     }
 }
 
+@media only screen and (max-width: 830px) {
+    .cardDescripcion {
+        max-width: 400px !important;
+        padding-bottom: 0.5rem;
+    }
+    .comicTitulo {
+        text-align: center;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
+    .contenedorEditoriales {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .editorialCard {
+        a {
+            width: 200px;
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .contenedorPersonajes {
+        grid-template-columns: repeat(2, 1fr) !important;
+        .personajesCard {
+           a {
+               width: 150px;
+               img {
+                   width: 150px;
+               }
+           }
+        }
+    }
     .iframeVid {
         width: 400px;
     }
@@ -90,7 +139,7 @@
 
     .comicMain {
         img {
-            width: 300px;
+            width: 290px;
         }
     }
 
@@ -100,9 +149,8 @@
 
     .contenedorSobreNos {
         padding: 1rem;
-
         img {
-            width: 300px;
+            display: none;
         }
     }
 }

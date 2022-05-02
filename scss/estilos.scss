@@ -2,10 +2,6 @@
 
 @import "utilities/variables";
 
-//IMPORT MEDIA QUERIES
-
-@import "utilities/mediaqueries";
-
 //MAPAS
 
 $bg-color: (color1: $color-principal,
@@ -56,14 +52,56 @@ header {
 
 main {
     margin-top: 120px;
+
+    .comicTituloPadre {
+        border: $border;
+        width: fit-content;
+        padding: 3rem;
+        margin-bottom: 3rem;
+
+        .comicTitulo {
+            letter-spacing: 5px;
+            font-size: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .comicMain {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                border-radius: 5px;
+                box-shadow: 0.2rem 0.2rem 0.2rem rgb(166, 166, 166);
+            }
+
+            .card-body {
+
+                .cardDescripcion {
+                    max-width: 300px;
+                    margin: auto;
+                }
+
+                .cardLinks {
+                    text-align: center;
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
     .comicsRelacionados {
         padding: 3rem 0rem;
         border: $border;
-        h3 {
+
+        h3, h2 {
             text-align: center;
             letter-spacing: 5px;
             padding-bottom: 2rem;
         }
+
         .comicsRelacionadosImg {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -71,10 +109,12 @@ main {
             place-items: center;
             padding: 0rem 15rem 3rem 15rem;
             gap: 3rem;
+
             img {
                 padding: 1rem;
                 border-radius: 0.25rem;
-                box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+
                 &:hover {
                     transform: scale(102%);
                     transition: 0.3s;
@@ -82,57 +122,70 @@ main {
             }
         }
     }
+
     .instruccionesContainer {
         display: flex;
         justify-content: space-evenly;
         padding-bottom: 5rem;
+
         .instruccionesUno {
             padding: 2rem;
             border: $border;
             border-radius: 5px;
+
             h1 {
                 text-align: center;
                 letter-spacing: 5px;
                 padding-bottom: 1rem;
                 font-size: 30px;
             }
+
             ol {
                 li {
                     max-width: 600px;
                 }
             }
+
             h2 {
                 font-size: 20px;
             }
+
             .iframeVid {
                 border-radius: 10px;
                 margin: 0rem 0rem 1rem 0rem;
             }
+
             .iconsRedesInstrucciones {
                 text-align: center;
+
                 i {
                     font-size: 2rem;
                     color: black;
                     padding: 3rem;
+
                     &:hover {
                         color: rgb(84, 84, 84);
                     }
                 }
             }
         }
+
         .instruccionesDos {
             padding: 2rem;
             margin-top: 5rem;
+
             h3 {
                 letter-spacing: 5px;
                 font-size: 20px;
             }
+
             img {
                 margin: 0rem 1rem 1rem 0rem;
                 border-radius: 5px;
             }
         }
     }
+
     .comicMain {
         display: flex;
         justify-content: center;
@@ -179,7 +232,7 @@ main {
         grid-template-rows: repeat(3, 1fr);
         margin: 2rem 0rem 5rem 0rem;
         place-items: center;
-        gap: 4rem;
+        gap: 2rem;
 
         .personajesCard {
             display: flex;
@@ -188,11 +241,8 @@ main {
             border: $border;
             border-radius: 5px;
             text-align: center;
+            margin: 2rem 0rem;
             max-height: 481px;
-
-            img {
-                width: 200px;
-            }
 
             h2 {
                 margin: auto;
@@ -234,12 +284,8 @@ main {
 
         .contenedorEditoriales {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            margin: 0rem 0rem 3rem 0rem;
-            gap: 4rem;
+            grid-template-columns: repeat(4, 0.5fr);
             place-items: center;
-
             .editorialCard {
                 display: flex;
                 justify-content: center;
@@ -247,7 +293,8 @@ main {
                 border: $border;
                 border-radius: 5px;
                 text-align: center;
-                max-height: x;
+                max-width: 250px;
+                margin-bottom: 3rem;
             }
 
             .tituloEditorialCard {
@@ -306,6 +353,7 @@ main {
 
                 .sobreNosUno {
                     padding-bottom: 3rem;
+
                     h1 {
                         letter-spacing: 8px;
                         font-size: 15px;
@@ -331,6 +379,7 @@ main {
                         background-color: $color-principal;
                         color: white;
                         text-decoration: none;
+
                         &:hover {
                             background-color: $color-hover;
                         }
@@ -385,13 +434,16 @@ main {
 
             .redesSociales {
                 padding: 3rem;
+
                 .iconsRedes {
                     text-align: center;
                     font-size: 2.5rem;
                     padding-top: 1rem;
+
                     i {
                         margin: 0rem 0.4rem;
                         color: black;
+
                         &:hover {
                             color: rgb(84, 84, 84);
                         }
@@ -401,6 +453,7 @@ main {
 
             .semiContacto {
                 padding: 3rem;
+
                 h3 {
                     padding-bottom: 1rem;
                     text-align: center;
@@ -469,6 +522,7 @@ h2 {
 .tendencias {
     border-bottom: $border;
     @extend %padding;
+
     h1 {
         letter-spacing: 5px;
     }
@@ -488,6 +542,7 @@ h2 {
 
 .recienAgregados {
     @extend %padding;
+
     h2 {
         letter-spacing: 5px;
     }
@@ -509,9 +564,11 @@ h2 {
     background-color: map-get($map: $bg-color, $key: color1);
     padding: 4rem;
     box-shadow: $shadow;
+
     a {
         text-decoration: none;
         letter-spacing: 5px;
+
         &:hover {
             text-decoration: underline;
         }
@@ -591,3 +648,7 @@ h2 {
         }
     }
 }
+
+//IMPORT MEDIA QUERIES
+
+@import "utilities/mediaqueries";
